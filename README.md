@@ -1,4 +1,4 @@
-# Interactive_Linear_Graphing_Course
+# Linear Equations: De-mystified!
 # By Hyuk-Je Kwon
 
 # The following is an interactive course that teaches novice mathematicians how to graph with linear equations.
