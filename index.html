@@ -1,0 +1,72 @@
+<!--- Written by Hyuk-Je Kwon --->
+<html>
+    <head>
+        <style>
+            h1 {
+                margin: 25px;
+                font-family: "Arial", Helvetica, sans-serif;
+                font-size: 50;
+                text-align: center;
+                text-shadow: 3px 3px white;
+            }
+            body {
+                background-color: e0a0b4;
+            }
+            p {
+                font-size: 24;
+                text-align: center;
+                margin: 10px;
+                font-family: "Arial", Helvetica, sans-serif;
+            }
+            .sliders {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 20px;
+                width: 100%;
+            }
+            .slider {
+                -webkit-appearance: none;
+                width: 100%;
+                height: 25px;
+                background: #a06080;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+            }
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px;
+                height: 25px;
+                background: white;
+                cursor: pointer;
+            }
+            #interactive-graph {
+                margin: auto;
+                padding: 0;
+                display: block;
+                border: 5px solid black;
+            }
+            #answer {
+                margin: auto;
+                font-size: 25;
+            }
+        </style>
+        <h1>Linear Equations: De-mystified!</h1>
+    </head>
+    <body onload="draw();">
+        <canvas id="interactive-graph" width="840" height="840"></canvas>
+        <script src="graph.js"></script>
+        <div class="sliders">
+            <br>
+            <input type="range" min="-8" max ="8" value = "1" class="slider" id="slope" style="width: 25%;" step="0.25">
+            <input type="range" min="-8" max ="8" value = "0" class="slider" id="y_int" style="width: 25%;" step="0.25">
+        </div>
+        <p>equation: <span id="eq">y = 1x</span></p>
+        <p>slope(m): <span id="m">1</span></p>
+        <p>y-intercept(b): (0, <span id="b">0</span>)</p>
+        <div style="text-align: center;">
+            <input type="text" id="textbox" name="fname" style="font-size: 30px;">
+        </div>
+    </body>
+</html>
